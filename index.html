@@ -9,20 +9,53 @@
 
 	<link rel="stylesheet" href="assets/css/style.css" />
 
+
+
 </head>
 
 <body class="is-preload">
+	  
+	  <script>
+		// JavaScript code goes here
+		document.addEventListener("DOMContentLoaded", function() {
+		  const navToggle = document.querySelector("#nav-toggle");
+		  const navMenu = document.querySelector("#nav-menu");
+	  
+		  // Add event listener to each navigation item
+		  const navItems = document.querySelectorAll("#nav-menu li a");
+		  navItems.forEach((item) => {
+			item.addEventListener("click", () => {
+			  navMenu.classList.remove("active"); // Collapse the menu
+			  navToggle.classList.remove("active"); // Reset the toggle button
+			});
+		  });
+	  
+		  navToggle.addEventListener("click", function() {
+			navMenu.classList.toggle("active");
+			navToggle.classList.toggle("active");
+		  });
+		});
+	  </script>
+	  
 
-	<!-- Nav -->
 	<nav id="nav">
-		<ul class="container">
-			<li><span class="website-name">Responsive PA</span></li>
+		<div class="container">
+		  <a href="#top" class="logo-container">
+			<img src="./static/responsible_pa_logo.png" alt="Logo" class="logo-image">
+		  </a>
+		  <div id="nav-toggle" class="nav-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		  </div>
+		  <ul id="nav-menu">
 			<li><a href="#top">About</a></li>
 			<li><a href="#activities">Activities</a></li>
 			<li><a href="#team">Team</a></li>
 			<li><a href="#currentwork">Current Work</a></li>
-		</ul>
-	</nav>
+		  </ul>
+		</div>
+	  </nav>
 
 	<!-- Home -->
 	<article id="top" class="wrapper style1">
@@ -44,286 +77,144 @@
 						environment as well as farm yield. A robust and trustworthy DSS can thus assist in reaching a
 						needed
 						balance.</p>
-						<!-- <div class="carousel">
-							<button class="carousel__button carousel__button--left">
-								<img src="" alt="">
-							</button>
-							<div class="carousel__track-container">
-								<ul class="carousel__track">
-									<li class="carousel__slide">
-										 <img src="../images/pic01.jpg" alt="" class="carousel__image">
-									</li>
-									<li class="carousel__slide">
-										 <img src="../images/pic02.jpg" alt="" class="carousel__image">
-									</li>
-									<li class="carousel__slide">
-										 <img src="../images/pic03.jpg" alt="" class="carousel__image">
-									</li>
-								</ul>
-							</div>
-							<button class="carousel__button carousel__button--right">
-								<img src="" alt="">
-							</button>
-
-							<div class="carousel__nav">
-								<button class="carousel__indicator">
-
-								</button>
-								<button class="carousel__indicator">
-
-								</button>
-								<button class="carousel__indicator">
-
-								</button>
-							</div>
-						</div> -->
 				</div>
 			</div>
 		</div>
 	</article>
 
-	<!-- Our Objectives -->
-	<article id="activities" class="wrapper style2">
-		<div class="container" style="width: 100%;">
-			<!-- Header -->
-			<header>
-				<h2>Our Objectives</h2>
-			</header>
-			<!-- Row of Objectives -->
-			<div class="row aln-center">
-				<!-- Algorithms for AI-decision Support Tools -->
-				<div class="col-4 col-8-medium col-12-small">
-					<section class="box style1">
-						<a class="image featured"><img src="./static/ActivitiesPics/Flying Drone.png"
-								style="object-fit:contain; height: 300;" alt="" /></a>
-						<h3><a href="#objective1" class="scrolly"> Algorithms for AI-decision Support
-								Tools</a></h3>
-						<p>Our project gathers scholars from various disciplines around the
-							collection of data, design of
-							algorithms, and testing of low-cost nutrient sensors. All of this activity has the end goal
-							of
-							better informing AI models that can aid farmers in their on-farm decision making. Means of
-							data
-							capture included in our research range from drone capture, multispectral and hyperspectral
-							imaging,
-							and grab and ISCO sampling.</p>
-					</section>
-				</div>
-				<!-- Responsible Innovation -->
-				<div class="col-4 col-6-medium col-12-small">
-					<section class="box style1">
-						<a class="image featured"><img src="./static/Responsible innovation1.jpg"
-								style="object-fit:contain; height: 310px;" alt="" /></a>
-						<h3><a href="#objective2" class="scrolly">Responsible Innovation</a></h3>
-						<p>We recognize that what we design must be informed by ethics and trust.
-							Anticipating impacts, engaging
-							stakeholders, seeking critical input, and establishing consensus on how technologies we
-							develop
-							should be governed are seminal to establishing this sense of ethics. In doing so, we draw
-							from
-							theoretical perspectives and case-based work in responsible innovation, co-design, and
-							living labs
-							literature. <br />
-							<br />
-						</p>
-					</section>
-				</div>
-				<!-- Sensor-Driven PES Mechanism -->
-				<div class="col-4 col-6-medium col-12-small">
-					<section class="box style1">
-						<a class="image featured"><img
-								src="./static/ActivitiesPics/PES farm photo.jpeg"
-								style="object-fit:contain; height: 310px;" alt="" /></a>
-						<h3><a href="#objective3" class="scrolly">Sensor-Driven PES Mechanism</a></h3>
-						<p>Our experimental approach in our research will see if 1) payment for
-							ecosystem services (PES) and 2)
-							workforce training shaped by extension services and curriculum development experts increases
-							farm
-							productivity and adoption of sustainable farm practices. We will implement regulatory policy
-							mechanisms side by side as points of comparison.
-							<br />
-							<br />
-						</p>
-					</section>
-				</div>
+<!-- Our Objectives -->
+<article id="activities" class="wrapper style2">
+	<div class="container" style="width: 100%;">
+	  <!-- Header -->
+	  <header>
+		<h2>Our Objectives</h2>
+	  </header>
+	  <!-- Row of Objectives -->
+	  <div class="row aln-center" style="display: flex; flex-wrap: wrap; text-justify: justify;">
+		<!-- Row of Objectives -->
+		<div class="row aln-center">
+			<!-- Algorithms for AI-decision Support Tools -->
+			<div class="col-4 col-md-6 col-12-small">
+			<section class="box style1" style="height: 100%;">
+				<a class="image featured"><img src="./static/ActivitiesPics/Flying Drone.png" style="object-fit: contain; height: 100%; width: 100%;" alt="" /></a>
+				<h3><a href="#objective1" class="scrolly">Algorithms for AI-decision Support Tools</a></h3>
+				<p style="text-align: justify;">Our project gathers scholars from various disciplines around the collection of data, design of algorithms, and testing of low-cost nutrient sensors. All of this activity has the end goal of better informing AI models that can aid farmers in their on-farm decision making. Means of data capture included in our research range from drone capture, multispectral and hyperspectral imaging, and grab and ISCO sampling.</p>
+			</section>
+			</div>
+			<!-- Responsible Innovation -->
+			<div class="col-4 col-md-6 col-12-small">
+			<section class="box style1" style="height: 100%;">
+				<a class="image featured"><img src="./static/Responsible innovation1.jpg" style="object-fit: contain; height: 100%; width: 100%;" alt="" /></a>
+				<h3><a href="#objective2" class="scrolly">Responsible Innovation</a></h3>
+				<p style="text-align: justify;">We recognize that what we design must be informed by ethics and trust. Anticipating impacts, engaging stakeholders, seeking critical input, and establishing consensus on how technologies we develop should be governed are seminal to establishing this sense of ethics. In doing so, we draw from theoretical perspectives and case-based work in responsible innovation, co-design, and living labs literature.</p>
+			</section>
+			</div>
+			<!-- Sensor-Driven PES Mechanism -->
+			<div class="col-4 col-md-6 col-12-small">
+			<section class="box style1" style="height: 100%;">
+				<a class="image featured"><img src="./static/ActivitiesPics/PES farm photo.jpeg" style="object-fit: contain; height: 100%; width: 100%;" alt="" /></a>
+				<h3><a href="#objective3" class="scrolly">Sensor-Driven PES Mechanism</a></h3>
+				<p style="text-align: justify;">Our experimental approach in our research will see if 1) payment for ecosystem services (PES) and 2) workforce training shaped by extension services and curriculum development experts increases farm productivity and adoption of sustainable farm practices. We will implement regulatory policy mechanisms side by side as points of comparison.</p>
+			</section>
 			</div>
 		</div>
-	</article>
+	</div>
+  </article>
 
-	<!-- Algorithms for AI-decision Support Tools -->
-	<article id="objective1" class="wrapper style5">
-		<div class="container" style="width: 80%;">
-			<!-- Header -->
-			<header>
-				<h2>Algorithms for AI-decision Support
-					Tools</h2>
-				<p>How can we ensure proper calibration, validation, accuracy, and trust in AI-IDSS as applied to PA?
-				</p>
-			</header>
-			<!-- Row of Objectives -->
-			<div class="row aln-center">
-				<div class="col-4 col-8-medium col-12-small">
-					<section class="box style3">
-						<h3>Capture Hyperspectral Data of Fields Via Drones
-							<br />
-							<br />
-						</h3>
-						<p style="text-align: left;">Our project is coordinating between SDSU graduate students and
-							UVM’s Spatial Analysis Lab to
-							run
-							drone flights and process their corresponding data. These efforts will identify biological
-							stressors, nutrient absorption rates, and various other terrestrial factors through the
-							detection of
-							different spectral bands as indicators. </p>
-						<br />
-						<br />
-					</section>
-				</div>
-				<div class="col-4 col-8-medium col-12-small">
-					<section class="box style3">
-						<h3>Develop AI-IDSS that can Support Farmer Decision Making Toward sustainable practices</h3>
-						<p style="text-align: left;">Pulling from data collected in the other activities under Objective
-							1, our team will work
-							with
-							farmers to design decision support tools (DSTs) to test the efficacy of our approach against
-							standing regulatory models (i.e. APEX and DAYCENT models). Despite the wide use of such
-							models,
-							work
-							from researchers on our team have demonstrated that their acceptance is not necessarily an
-							indication of accuracy. We see this as presenting opportunities for empirically tested
-							alternatives
-							on the project. </p>
-					</section>
-				</div>
-				<div class="col-4 col-8-medium col-12-small">
-					<section class="box style3">
-						<h3>Deploy Low-cost Nutrient Sensors in the Field
-							<br />
-							<br />
-						</h3>
-						<p style="text-align: left;">Remote and low-cost sensors can measure environmental change in
-							accessible ways that make for
-							easier
-							interpretation for users. This intervention builds on standing UVM research on low-cost
-							sensor
-							development to track P and N field concentrations specifically. </p>
-						<br />
-						<br />
-						<br />
-					</section>
-				</div>
-			</div>
+  
+  
+  
+<!-- Algorithms for AI-decision Support Tools -->
+<article id="objective1" class="wrapper style2">
+	<div class="container" style="width: 100%;">
+	  <!-- Header -->
+	  <header>
+		<h2>Algorithms for AI-decision Support Tools</h2>
+		<p >How can we ensure proper calibration, validation, accuracy, and trust in AI-IDSS as applied to PA?</p>
+	  </header>
+	  <!-- Row of Objectives -->
+	  <div class="row aln-center" style="display: flex; flex-wrap: wrap;">
+		<!-- Capture Hyperspectral Data of Fields Via Drones -->
+		<div class="col-4 col-md-6 col-12-small">
+		  <section class="box style1" style="height: 100%;">
+			<h3>Capture Hyperspectral Data of Fields Via Drones</h3>
+			<p style="text-align: justify;">Our project is coordinating between SDSU graduate students and UVM’s Spatial Analysis Lab to run drone flights and process their corresponding data. These efforts will identify biological stressors, nutrient absorption rates, and various other terrestrial factors through the detection of different spectral bands as indicators.</p>
+		  </section>
 		</div>
-		<br>
-	</article>
-
-	<!-- Responsible Innovation -->
-	<article id="objective2" class="wrapper style3">
-		<div class="container" style="width: 95%;">
-			<header>
-				<h2>Responsible Innovation</h2>
-				<p>How can our work advance responsible innovation and living labs approaches as means of understanding
-					human-technology implications of PA and fostering trustworthy AI in agriculture? </p>
-			</header>
-
-			<div class="row aln-center">
-				<div class="col-4 col-8-medium col-12-small">
-					<section class="box style3">
-						<h3>Conduct Interviews and Focus Group Discussions to Assess Different Perspectives and Values
-							Surrounding PA
-						</h3>
-						<p style="text-align: left;">Our qualitative efforts have included six foresight workshops in
-							both South Dakota and Vermont late in 2019. Since then, we have organized interview and
-							survey campaigns for farmers and developed a framework for design workshops that can set the
-							stage for participatory speculative design. The goal of the latter is to involve users in
-							technology development on the project and engage them as meaningful contributors to future
-							directions for the project as part of the living labs framework.
-							<br />
-							<br />
-							<br />
-							<br />
-							<br />
-							<br />
-						</p>
-					</section>
-				</div>
-			<div class="col-4 col-8-medium col-12-small">
-				<section class="box style3">
-					<h3>Engage with Stakeholders and Commit to Public Outreach
-						<br />
-						<br />
-					</h3>
-					<p style="text-align: left;">A key part of our inclusionary aim is incorporate a variety of
-						stakeholders from across the value chain (small and large-scale farmers, small rural town
-						economic development bodies, women landowners and operators, developers of open-access
-						agriculture technologies, and regulatory bodies) and among farmers themselves (corn/soybean
-						versus diversified small crops). Likewise, to extend further to the broader public, we are
-						experimenting with interactive platforms like Mozilla Hubs to create immersive exhibition
-						spaces. We invest in this experimentation to create an outlet for conversation around the
-						changes that digitalization has borne for agriculture. These changes include transformations
-						for the workforce as well as heightened potential for pursuing sustainability while boosting
-						field productivity.
-						
-					</p>
-				</section>
-			</div>
+		<!-- Develop AI-IDSS that can Support Farmer Decision Making Toward Sustainable Practices -->
+		<div class="col-4 col-md-6 col-12-small">
+		  <section class="box style1" style="height: 100%;">
+			<h3>Develop AI-IDSS that can Support Farmer Decision Making Toward Sustainable Practices</h3>
+			<p style="text-align: justify;">Pulling from data collected in the other activities under Objective 1, our team will work with farmers to design decision support tools (DSTs) to test the efficacy of our approach against standing regulatory models (i.e. APEX and DAYCENT models). Despite the wide use of such models, work from researchers on our team have demonstrated that their acceptance is not necessarily an indication of accuracy. We see this as presenting opportunities for empirically tested alternatives on the project.</p>
+		  </section>
 		</div>
+		<!-- Deploy Low-cost Nutrient Sensors in the Field -->
+		<div class="col-4 col-md-6 col-12-small">
+		  <section class="box style1" style="height: 100%;">
+			<h3>Deploy Low-cost Nutrient Sensors in the Field</h3>
+			<p style="text-align: justify;">Remote and low-cost sensors can measure environmental change in accessible ways that make for easier interpretation for users. This intervention builds on standing UVM research on low-cost sensor development to track P and N field concentrations specifically.</p>
+		  </section>
+		</div>
+	  </div>
+	</div>
+  </article>
+  
+  
+<!-- Responsible Innovation -->
+<article id="objective2" class="wrapper style2">
+	<div class="container" style="width: 80%;">
+	  <!-- Header -->
+	  <header>
+		<h2>Responsible Innovation</h2>
+		<p>How can our work advance responsible innovation and living labs approaches as means of understanding human-technology implications of PA and fostering trustworthy AI in agriculture?</p>
+	  </header>
+  
+	  <!-- Row of Objectives -->
+	  <div class="row aln-center">
+		<div class="col-6 col-md-12 col-12-small">
+		  <section class="box style1" style="height: 100%;">
+			<h3>Conduct Interviews and Focus Group Discussions to Assess Different Perspectives and Values Surrounding PA</h3>
+			<p style="text-align: justify;">Our qualitative efforts have included six foresight workshops in both South Dakota and Vermont late in 2019. Since then, we have organized interview and survey campaigns for farmers and developed a framework for design workshops that can set the stage for participatory speculative design. The goal of the latter is to involve users in technology development on the project and engage them as meaningful contributors to future directions for the project as part of the living labs framework.</p>
+		  </section>
+		</div>
+		<div class="col-6 col-md-12 col-12-small">
+		  <section class="box style1" style="height: 100%;">
+			<h3>Engage with Stakeholders and Commit to Public Outreach</h3>
+			<p style="text-align: justify;">A key part of our inclusionary aim is to incorporate a variety of stakeholders from across the value chain (small and large-scale farmers, small rural town economic development bodies, women landowners and operators, developers of open-access agriculture technologies, and regulatory bodies) and among farmers themselves (corn/soybean versus diversified small crops). Likewise, to extend further to the broader public, we are experimenting with interactive platforms like Mozilla Hubs to create immersive exhibition spaces. We invest in this experimentation to create an outlet for conversation around the changes that digitalization has borne for agriculture. These changes include transformations for the workforce as well as heightened potential for pursuing sustainability while boosting field productivity.</p>
+		  </section>
+		</div>
+	  </div>
+	</div>
+  </article>
+  
+  
 
 
-	</article>
 	<!-- Sensor-Driven PES Mechanism -->
-	<article id="objective3" class="wrapper style1">
-		<div class="container" style="width: 90%;">
-			<header>
-				<h2>Sensor-Driven PES Mechanism</h2>
-				<p>In what ways might sensor-based PES mechanisms revolutionize designs of social-environmental systems?
-				</p>
-			</header>
-			<!-- Row of Objectives -->
-			<div class="row aln-center">
-				<div class="col-4 col-8-medium col-12-small">
-					<section class="box style3">
-						<h3>Set up a PES System as Part of our Living Lab Approach
-							<br />
-							<br />
-						</h3>
-						<p style="text-align: left;">Early in our collaborative research, we engaged diverse
-							stakeholders (including technology
-							developers, academics, government officials, and farmers) in workshops which indicated in
-							part
-							the pressing need for policy mechanisms – among them, performance-based payment for
-							ecosystem
-							services (PES) – to incentivize farmers. As part of a 2X2 factorial design, our project will
-							test PES as an incentive structure as compared to baseline monetary incentives, with
-							additional
-							groupings based on traditional policy mechanisms (APEX/DAYCENT) and our piloted DSTs with
-							additional curricular development for farmers.
-							<br />
-							<br />
-							<br />
-							<br />
-						</p>
-					</section>
-				</div>
-				<div class="col-4 col-8-medium col-12-small">
-					<section class="box style3">
-						<h3>Develop a Curriculum for use of AI-IDSS for Select Farmers in our Quasi-Experimental Design
-						</h3>
-						<p style="text-align: left;">Given our NSF designation as a project under the theme of the
-							future of work at the
-							human-technological frontier, we recognize that with many of the strides we seek to realize
-							through our researchers, farmers will need hands-on training for calibrating and
-							interpreting findings from emergent technologies to enhance their decision-making
-							capacities. Therefore, workforce training is a pivotal consideration for the approaches we
-							pilot. As part of our project, we will include university extension programs in South Dakota
-							and Vermont as well as an educational consultant to analyze farmer profiles and competencies
-							to determine what tasks need to be included in a curriculum that prepares farmers for the
-							future of agricultural work. These efforts will also update standing curricula used at SDSU
-							and UVM. </p>
-					</section>
-				</div>
-			</div>
-	</article>
+<article id="objective3" class="wrapper style2">
+  <div class="container" style="width: 80%;">
+    <header>
+      <h2>Sensor-Driven PES Mechanism</h2>
+      <p>In what ways might sensor-based PES mechanisms revolutionize designs of social-environmental systems?</p>
+    </header>
+    <!-- Row of Objectives -->
+    <div class="row aln-center">
+      <div class="col-6 col-md-12 col-12-small">
+        <section class="box style1" style="height: 100%;">
+          <h3>Set up a PES System as Part of our Living Lab Approach</h3>
+          <p style="text-align: justify;">Early in our collaborative research, we engaged diverse stakeholders (including technology developers, academics, government officials, and farmers) in workshops which indicated, in part, the pressing need for policy mechanisms – among them, performance-based payment for ecosystem services (PES) – to incentivize farmers. As part of a 2X2 factorial design, our project will test PES as an incentive structure as compared to baseline monetary incentives, with additional groupings based on traditional policy mechanisms (APEX/DAYCENT) and our piloted DSTs with additional curricular development for farmers.</p>
+        </section>
+      </div>
+      <div class="col-6 col-md-12 col-12-small">
+        <section class="box style1" style="height: 100%;">
+          <h3>Develop a Curriculum for use of AI-IDSS for Select Farmers in our Quasi-Experimental Design</h3>
+          <p style="text-align: justify;">Given our NSF designation as a project under the theme of the future of work at the human-technological frontier, we recognize that with many of the strides we seek to realize through our researchers, farmers will need hands-on training for calibrating and interpreting findings from emergent technologies to enhance their decision-making capacities. Therefore, workforce training is a pivotal consideration for the approaches we pilot. As part of our project, we will include university extension programs in South Dakota and Vermont as well as an educational consultant to analyze farmer profiles and competencies to determine what tasks need to be included in a curriculum that prepares farmers for the future of agricultural work. These efforts will also update standing curricula used at SDSU and UVM.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</article>
+
 
 	<!-- Team Section -->
 	<article id="team" class="wrapper style3">
