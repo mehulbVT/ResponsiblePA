@@ -2179,7 +2179,7 @@ ul.actions li:first-child {
   display: flex;
   align-items: center;
   height: 100%;
-  margin-left: 0px; /* Add a margin for spacing */
+  padding: 10px; /* Add a margin for spacing */
 }
 
 #nav .logo-image {
