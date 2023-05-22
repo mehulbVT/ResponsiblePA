@@ -49,3 +49,55 @@
 .carousel__button img {
   width: 12px;
 }
+
+/* Center align the article boxes */
+.row .box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Set a maximum width for the images */
+.row .box img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adjust the spacing between team members */
+.row .col-4 {
+  margin-bottom: 2rem;
+}
+
+/* Style the team member names */
+.row .box h3 a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Style the positions */
+.row .box p.position {
+  font-weight: bold;
+  color: #888;
+}
+
+/* Style the institutions */
+.row .box p strong {
+  font-weight: bold;
+}
+
+/* Style the research keywords */
+.row .box p:not(.position) {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+/* Adjust the spacing between sections on medium and small screens */
+@media (max-width: 980px) {
+  .row .col-4 {
+    margin-bottom: 1rem;
+  }
+}
