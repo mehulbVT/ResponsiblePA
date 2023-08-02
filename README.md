@@ -17,3 +17,6 @@ this is a single page website
 2. run 'git add .'
 3. run 'git commit -m "changes made"'
 4. run 'git push origin main'
+
+
+# I haven't removed the old website files and images, there are many project related images still in the directory.
