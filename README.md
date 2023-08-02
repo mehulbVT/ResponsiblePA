@@ -2,6 +2,8 @@
 
 All the file content changes are to be made in index.html
 
+this is a single page website
+
 
 # To make changes
 1. make changes in the index.html file
